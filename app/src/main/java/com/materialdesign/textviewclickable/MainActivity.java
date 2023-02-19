@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 
 		TextView textView = findViewById(R.id.text_view);
-		String text = "I wnat THIS and THIS to be clickable";
+		String text = "I want THIS and THIS to be clickable";
 		SpannableString ss = new SpannableString(text);
 
         ClickableSpan clickableSpan1 = new ClickableSpan() {
