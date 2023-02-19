@@ -3,9 +3,11 @@ package com.materialdesign.textviewclickable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
@@ -27,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(@NonNull View view) {
                 Toast.makeText(MainActivity.this, "Section One, Checked", Toast.LENGTH_SHORT).show();
+			}
+
+			@Override
+			public void updateDrawState(@NonNull TextPaint ds) {
+				super.updateDrawState(ds);
+				ds.setColor(Color.BLUE);
+				ds.setUnderlineText(false);
 			}
 		};
 
